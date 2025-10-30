@@ -5,3 +5,6 @@ An exercise to create a Python package, build it, test it, distribute it, and us
 # Halloween Theme Package
 
 Read a scary story or generate a fun drawing!
+
+Teammates:
+Evelynn Mak (evemak)
