@@ -10,3 +10,4 @@ Teammates:
 Evelynn Mak (evemak)
 Leo Li(https://github.com/LiShangcheng)
 Harrison Gao
+Christine Jin (https://github.com/Christine-Jin)
