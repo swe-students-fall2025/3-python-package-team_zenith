@@ -10,3 +10,5 @@ Teammates:
 Evelynn Mak (evemak)
 Leo Li(https://github.com/LiShangcheng)
 Harrison Gao, hg2655@nyu.edu
+Christine Jin (https://github.com/Christine-Jin)
+
