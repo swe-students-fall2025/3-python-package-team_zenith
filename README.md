@@ -8,3 +8,4 @@ Read a scary story or generate a fun drawing!
 
 Teammates:
 Evelynn Mak (evemak)
+Leo Li(https://github.com/LiShangcheng)
