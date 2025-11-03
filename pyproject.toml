@@ -8,7 +8,7 @@ description = "A silly Halloween-themed Python package 🎃"
 version = "0.1.0"
 authors = [
   { name="Harrison Gao", email="hg2655@nyu.edu" },
-  { name="Evelynn", email="" },
+  { name="Evelynn", email="em4829@nyu.edu" },
   { name="Leo", email="" },
   { name="Christine", email="" },
 ]
