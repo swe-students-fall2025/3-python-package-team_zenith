@@ -6,9 +6,46 @@ This module provides:
 2. ghost_say()   → Displays a speech bubble and then the ghost.
 3. ghost_story() → Makes the ghost tell a horror story using horrors.get_horror().
 """
-
+import random
 import horrors  # Imports the horror story generator
 
+GHOST_STYLES = {
+    1: """
+      ⣴⣿⣿⣿⣦
+    ⣰⣿⡟⢻⣿⡟⢻⣧
+   ⣰⣿⣿⣇⣸⣿⣇⣸⣿
+  ⣴⣿⣿⣿⣿⠟⢻⣿⣿⣿
+⣠⣾⣿⣿⣿⣿⣿⣤⣼⣿⣿⠇
+⢿⡿⢿⣿⣿⣿⣿⣿⣿⣿⡿⠀
+ ⠈⠿⠿⠋⠙⢿⣿⡿⠁
+""",
+    2: """
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣾⣿⣿⣿⣿⣿⣿⣶⣄⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⠿⢿⣿⣿⣿⣿⣆⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⠁⠀⠿⢿⣿⡿⣿⣿⡆⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣦⣤⣴⣿⠃⠀⠿⣿⡇⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⡿⠋⠁⣿⠟⣿⣿⢿⣧⣤⣴⣿⡇⠀
+⠀⠀⠀⠀⢀⣠⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠘⠁⢸⠟⢻⣿⡿⠀⠀
+⠀⠀⠙⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣴⣇⢀⣤⠀⠀⠀⠀⠘⣿⠃⠀⠀
+⠀⠀⠀⠀⠀⢈⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣴⣿⢀⣴⣾⠇⠀⠀⠀
+⠀⠀⣀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀
+⠀⠀⠉⠉⠉⠉⣡⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⡿⠟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⣴⡾⠿⠿⠿⠛⠋⠉⠀⢸⣿⣿⣿⣿⠿⠋⢸⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⡿⠟⠋⠁⠀⠀⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+""",
+    3: """
+⠀⠀⠄⠀⠀⠂⠀⠀⠀⡀⠀⠀
+⠁⠀⠀⣠⣶⣿⣷⣶⣄⠀⠀⠁
+⠈⠀⢰⡿⠛⢿⡿⠻⣿⡆⠀⡀
+⠀⠠⣾⡇⠀⢸⡇⠀⢸⣧⠀⠀
+⠀⠀⣿⣷⣤⣿⣷⣤⣿⣿⠀⠀
+⠠⠀⣿⣿⣿⣿⣿⣿⣿⣿⠀⡀
+⠄⡀⠙⠟⢿⣿⡿⠿⠿⠋⠀⠀
+"""
+}
 
 def draw_ghost():
     """
@@ -18,16 +55,8 @@ def draw_ghost():
     Example:
         draw_ghost()
     """
-    print(
-        "      ⣴⣿⣿⣿⣦",
-        "    ⣰⣿⡟⢻⣿⡟⢻⣧",
-        "   ⣰⣿⣿⣇⣸⣿⣇⣸⣿",
-        "  ⣴⣿⣿⣿⣿⠟⢻⣿⣿⣿",
-        "⣠⣾⣿⣿⣿⣿⣿⣤⣼⣿⣿⠇",
-        "⢿⡿⢿⣿⣿⣿⣿⣿⣿⣿⡿⠀",
-        " ⠈⠿⠿⠋⠙⢿⣿⡿⠁",
-        sep="\n"
-    )
+    s = random.choice([1,2,3])
+    print(GHOST_STYLES[s])
 
 
 def ghost_say(message: str = "I'm haunting your terminal! Zelle me 50 or I'll overflow your stack."):
@@ -88,4 +117,4 @@ def ghost_story(length: str = "medium"):
 
 # Demo behavior when this file is run directly
 if __name__ == "__main__":
-    ghost_story()
+    ghost_say()
