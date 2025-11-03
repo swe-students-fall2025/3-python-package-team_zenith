@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pylloween"
+description = "A silly Halloween-themed Python package 🎃"
+version = "0.1.0"
+authors = [
+  { name="Harrison Gao", email="hg2655@nyu.edu" },
+  { name="Evelynn", email="" },
+  { name="Leo", email="" },
+  { name="Christine", email="" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["python", "package", "build", "tutorial"]
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+"Homepage" = "https://github.com/swe-students-fall2025/3-python-package-team_zenith"
+"Repository" = "https://github.com/swe-students-fall2025/3-python-package-team_zenith.git"
+"Bug Tracker" = "https://github.com/swe-students-fall2025/3-python-package-team_zenith/issues"
+
+[project.scripts]
+examplepackagefb1258 = "examplepackagefb1258.__main__:main"
