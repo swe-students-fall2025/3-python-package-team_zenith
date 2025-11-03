@@ -1,2 +1,2 @@
 import pylloween.horrors
-import pylloween.drawGhost as drawGhost
+import src.pylloween.ghost as ghost

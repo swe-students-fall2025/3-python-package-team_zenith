@@ -5,6 +5,7 @@ This module provides:
 1. draw_ghost()  → Draws an ASCII ghost.
 2. ghost_say()   → Displays a speech bubble and then the ghost.
 3. ghost_story() → Makes the ghost tell a horror story using horrors.get_horror().
+4. ghost_idea()  → Let one of our ghosts give you a movie idea to watch.
 """
 import random
 import horrors  # Imports the horror story generator
@@ -67,16 +68,6 @@ def ghost_say(message: str = "I'm haunting your terminal! Zelle me 50 or I'll ov
     ----------
     message : str, optional
         The text that the ghost will say (default: a spooky warning).
-
-    Example
-    -------
-    >>> ghost_say("Boo!")
-      _______
-     < Boo! >
-      -------
-          ⣴⣿⣿⣿⣦
-        ⣰⣿⡟⢻⣿⡟⢻⣧
-        ...
     """
     # Remove extra spaces from user input
     msg = message.strip()
@@ -113,6 +104,19 @@ def ghost_story(length: str = "medium"):
     """
     story = horrors.get_horror(length)
     ghost_say(story)
+    
+def ghost_idea(genre: str = "all"):
+    """
+    Makes the ghost give you a Halloween movie idea! Spoooky~
+
+    Parameters
+    ----------
+    genre : str, optional
+        The desired movie genre: "horror", "comedy", "cartoon", or "all (default: "all").
+    """
+    
+    movie = horrors.get_movie_idea(genre)
+    ghost_say(movie)
 
 
 # Demo behavior when this file is run directly
