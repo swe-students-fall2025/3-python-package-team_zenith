@@ -8,7 +8,6 @@ Read a scary story or generate a fun drawing!
 
 Teammates:
 Evelynn Mak (evemak)
-Leo Li(https://github.com/LiShangcheng)
-Harrison Gao, hg2655@nyu.edu
+Leo Li (https://github.com/LiShangcheng)
+Harrison Gao (https://github.com/HTK-G)
 Christine Jin (https://github.com/Christine-Jin)
-
