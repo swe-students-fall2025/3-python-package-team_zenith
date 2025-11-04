@@ -1,5 +1,9 @@
 name: CI / CD
-on: [push]
+
+on:
+  pull_request:
+    branches: [pipfile-experiment]
+
 jobs:
   build:
     runs-on: ubuntu-latest
