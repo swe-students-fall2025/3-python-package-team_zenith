@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pylloween"
-description = "A silly Halloween-themed Python package 🎃"
+description = "A silly Halloween-themed Python package 🎃. Get some Horror Stories & Movie ideas."
 version = "0.1.0"
 authors = [
   { name="Harrison Gao", email="hg2655@nyu.edu" },
@@ -13,37 +13,23 @@ authors = [
   { name="Christine" },
 ]
 license = { file = "LICENSE" }
-readme = { file = "README.md", content-type = "text/markdown" }
-keywords = ["python", "halloween", "ghosts", "stories", "cli", "entertainment"]
-requires-python = ">=3.9"
+readme = "README.md"
+keywords = ["python", "package", "build", "tutorial", "fun", "spooky", "horror", "halloween"]
+requires-python = ">=3.7"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
+
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Operating System :: OS Independent",
-    "Environment :: Console",
-    "Intended Audience :: End Users/Desktop",
-    "Topic :: Games/Entertainment",
-    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=7", "build", "twine"]
+dev = ["pytest"]
 
 [project.urls]
 "Homepage" = "https://github.com/swe-students-fall2025/3-python-package-team_zenith"
 "Repository" = "https://github.com/swe-students-fall2025/3-python-package-team_zenith.git"
 "Bug Tracker" = "https://github.com/swe-students-fall2025/3-python-package-team_zenith/issues"
-"Documentation" = "https://github.com/swe-students-fall2025/3-python-package-team_zenith#readme"
 
 [project.scripts]
 pylloween = "pylloween.__main__:main"
-
-[tool.setuptools.package-dir]
-"" = "src"
-
-[tool.setuptools.packages.find]
-where = ["src"]
