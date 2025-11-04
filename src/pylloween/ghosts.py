@@ -85,7 +85,6 @@ def draw_ghost(style: Optional[Union[int, str]] = None):
 
     print(GHOST_STYLES[chosen_style])
 
-
 def ghost_say(message: str = "I'm haunting your terminal! Zelle me 50 or I'll overflow your stack."):
     """
     Prints a ghost speech bubble with the given message, followed by the ghost itself.
@@ -112,7 +111,6 @@ def ghost_say(message: str = "I'm haunting your terminal! Zelle me 50 or I'll ov
 
     # Finally, draw the ghost under the message
     draw_ghost()
-
 
 def ghost_story(length: str = "medium"):
     """

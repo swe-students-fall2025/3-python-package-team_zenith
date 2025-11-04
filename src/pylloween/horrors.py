@@ -119,8 +119,6 @@ def get_horror(length: str = "medium")-> str:
         
     return random.choice(stories[length])
 
-# print(get_horror())
-
 def get_movie_idea(genre: str = "all") -> str:
     """Return a random Halloween movie based on genre.\n
     Parameters

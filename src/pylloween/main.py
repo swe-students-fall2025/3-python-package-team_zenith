@@ -1,5 +1,5 @@
 import argparse
-from .drawGhost import ghost_story, ghost_idea
+from .ghosts import ghost_story, ghost_idea
 
 def main():
     parser = argparse.ArgumentParser(description="👻 Pylloween — spooky fun in your terminal!")
