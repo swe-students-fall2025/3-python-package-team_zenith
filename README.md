@@ -1,7 +1,7 @@
 # Pylloween [![CI / CD](https://github.com/swe-students-fall2025/3-python-package-team_zenith/actions/workflows/build.yaml/badge.svg)](https://github.com/swe-students-fall2025/3-python-package-team_zenith/actions/workflows/build.yaml)
 
 <p align="center">
-  <img src="images/pylloween.png" alt="Pylloween Logo" width="250">
+  <img src="https://raw.githubusercontent.com/swe-students-fall2025/3-python-package-team_zenith/pipfile-experiment/images/pylloween.png" alt="Pylloween Logo" width="250">
 </p>
 
 Pylloween is a simple Python package that brings Halloween fun to your terminal.  
