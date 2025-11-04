@@ -1,4 +1,4 @@
-# Pylloween [![CI / CD](https://github.com/swe-students-fall2025/3-python-package-team_zenith/actions/workflows/build.yaml/badge.svg)](https://github.com/swe-students-fall2025/3-python-package-team_zenith/actions/workflows/build.yaml)
+# Pylloween [![CICD](https://github.com/swe-students-fall2025/3-python-package-team_zenith/actions/workflows/release.yaml/badge.svg)](https://github.com/swe-students-fall2025/3-python-package-team_zenith/actions/workflows/release.yaml)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/swe-students-fall2025/3-python-package-team_zenith/pipfile-experiment/images/pylloween.png" alt="Pylloween Logo" width="250">
