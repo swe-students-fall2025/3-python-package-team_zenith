@@ -119,6 +119,3 @@ def ghost_idea(genre: str = "all"):
     ghost_say(movie)
 
 
-# Demo behavior when this file is run directly
-if __name__ == "__main__":
-    ghost_say()

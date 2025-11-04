@@ -138,6 +138,3 @@ def get_movie_idea(genre: str = "all") -> str:
         return "Genre: " + genre + "\n" + random.choice(list(halloween_movies[genre]))
     
     return "Genre not found."
-
-if __name__ == "__main__":
-    get_movie_idea()
