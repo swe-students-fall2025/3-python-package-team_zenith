@@ -8,7 +8,12 @@ This module provides:
 4. ghost_idea()  → Let one of our ghosts give you a movie idea to watch.
 """
 import random
-import horrors  # Imports the horror story generator
+from typing import Optional, Union
+try:
+    # Prefer package-relative import when available
+    from . import horrors  # type: ignore
+except ImportError:  # pragma: no cover - fallback for direct execution
+    import horrors  # type: ignore  # Fallback for running module as a script
 
 GHOST_STYLES = {
     1: """
@@ -48,16 +53,37 @@ GHOST_STYLES = {
 """
 }
 
-def draw_ghost():
+def draw_ghost(style: Optional[Union[int, str]] = None):
     """
     Prints a cute ASCII ghost to the console.
 
+    Parameters
+    ----------
+    style : int | str | None, optional
+        Pick a specific ghost style by its numeric key.
+        When omitted or None, a random style is chosen.
+
     This function only handles the visual part — no message or logic.
     Example:
-        draw_ghost()
+        draw_ghost(2)
     """
-    s = random.choice([1,2,3])
-    print(GHOST_STYLES[s])
+    if style is None:
+        chosen_style = random.choice(list(GHOST_STYLES.keys()))
+    else:
+        if isinstance(style, str):
+            try:
+                chosen_style = int(style)
+            except ValueError as exc:
+                raise ValueError("style must be an integer key matching the available ghost styles") from exc
+        elif isinstance(style, int):
+            chosen_style = style
+        else:
+            raise TypeError("style must be an int, str, or None")
+
+        if chosen_style not in GHOST_STYLES:
+            raise ValueError(f"style must be one of {sorted(GHOST_STYLES.keys())}")
+
+    print(GHOST_STYLES[chosen_style])
 
 
 def ghost_say(message: str = "I'm haunting your terminal! Zelle me 50 or I'll overflow your stack."):
