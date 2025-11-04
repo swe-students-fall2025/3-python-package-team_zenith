@@ -141,5 +141,3 @@ def ghost_idea(genre: str = "all"):
     
     movie = horrors.get_movie_idea(genre)
     ghost_say(movie)
-
-
