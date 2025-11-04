@@ -63,14 +63,15 @@ Pylloween is designed as a lightweight package for practicing:
 From TestPyPI:
 
 ```bash
-pip install -i https://test.pypi.org/project/pylloween/
+pip install -i https://test.pypi.org/simple/ pylloween
 ```
 
+<!--
 From PyPI (after release):
 
 ```bash
 pip install pylloween
-```
+``` -->
 
 ---
 
