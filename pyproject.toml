@@ -8,9 +8,9 @@ description = "A silly Halloween-themed Python package 🎃. Get some Horror Sto
 version = "0.1.0"
 authors = [
   { name="Harrison Gao", email="hg2655@nyu.edu" },
-  { name="Evelynn" },
+  { name="Evelynn", email = "example@nyu.edu"},
   { name="Leo", email="shangchengli2022@163.com" },
-  { name="Christine" },
+  { name="Christine" , email = "example@nyu.edu"},
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
