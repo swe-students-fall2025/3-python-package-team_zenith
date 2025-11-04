@@ -13,7 +13,7 @@ Harrison Gao (https://github.com/HTK-G)
 
 Leo Li (https://github.com/LiShangcheng)
 
-Evelynn Mak (evemak)
+Evelynn Mak (https://github.com/evemak)
 
 Christine Jin (https://github.com/Christine-Jin)
 
