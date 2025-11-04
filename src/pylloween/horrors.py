@@ -34,6 +34,63 @@ long_stories = [
         "When I broke the mirror, the voice didn’t stop. It just moved to the window."
     ]
 
+halloween_movies = {
+    "horror": {
+        "Halloween (1978)",
+        "A Nightmare on Elm Street",
+        "Friday the 13th",
+        "The Exorcist",
+        "The Shining",
+        "Psycho",
+        "It (2017)",
+        "It Follows",
+        "The Conjuring",
+        "Hereditary",
+        "Midsommar",
+        "Get Out",
+        "Us",
+        "The Blair Witch Project",
+        "Poltergeist",
+        "Child’s Play",
+        "The Ring",
+        "The Grudge",
+        "Sinister",
+        "Insidious",
+        "The Babadook",
+        "The Witch",
+        "Crimson Peak",
+        "The Cabin in the Woods",
+        "The Evil Dead"
+    },
+
+    "comedy": {
+        "Beetlejuice",
+        "Ghostbusters (1984)",
+        "Shaun of the Dead",
+        "Practical Magic",
+        "The Addams Family (1991)",
+        "The Addams Family Values",
+        "Edward Scissorhands",
+        "Sleepy Hollow",
+        "Scream",
+        "Trick 'r Treat",
+        "Army of Darkness"
+    },
+
+    "cartoon": {
+        "Hocus Pocus",
+        "The Nightmare Before Christmas",
+        "Coraline",
+        "Monster House",
+        "Halloweentown",
+        "ParaNorman",
+        "Corpse Bride",
+        "Casper",
+        "The Haunting (1963)",
+        "The Sixth Sense"
+    }
+}
+
 stories = {"short": short_stories, "medium": medium_stories, "long": long_stories}
 
 def get_horror(length: str = "medium")-> str:
@@ -51,6 +108,8 @@ def get_horror(length: str = "medium")-> str:
         A randomly chosen horror story.
     """
     
+    length = length.lower()
+    
     if length not in stories:
         return (
             "💀 Pause, don't look behind!!! "
@@ -60,4 +119,20 @@ def get_horror(length: str = "medium")-> str:
         
     return random.choice(stories[length])
 
-# print(get_horror())
+def get_movie_idea(genre: str = "all") -> str:
+    """Return a random Halloween movie based on genre.\n
+    Parameters
+    ---
+    "horror", "cartoon", "comedy", "all"
+    """
+    
+    genre = genre.lower()
+    
+    if genre == "all":
+        all_movies = set().union(*halloween_movies.values())
+        return "Genre: " + genre + "\n" + random.choice(list(all_movies))
+    
+    if genre in halloween_movies:
+        return "Genre: " + genre + "\n" + random.choice(list(halloween_movies[genre]))
+    
+    return "Genre not found."

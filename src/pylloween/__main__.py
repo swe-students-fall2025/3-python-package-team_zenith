@@ -1,12 +1,4 @@
-import pylloween as plw
-
-def main():
-    """
-    Get some horrors and print it out
-    """
-    plw.ghost_story()
+from .main import main
 
 if __name__ == "__main__":
-    # run the main function
     main()
-    

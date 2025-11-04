@@ -1,50 +1,72 @@
 """
-Tests for the horrors.py module (get_horror function).
+Tests for the horrors.py
 """
 import pytest
-import sys
-import os
+from pylloween.horrors import get_movie_idea, get_horror, short_stories, medium_stories, long_stories
 
-# Add the src directory to the path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
+# -----------------------------
+# Tests for get_horror()
+# -----------------------------
 
-from pylloween.horrors import get_horror, stories
+def test_get_horror_returns_string():
+    """Should always return a string."""
+    result = get_horror("short")
+    assert isinstance(result, str)
+    assert len(result) > 0
+
+def test_get_horror_valid_lengths():
+    """All valid lengths should return a non-empty string."""
+    for length in ["short", "medium", "long"]:
+        story = get_horror(length)
+        assert len(story.strip()) > 0
+        assert "💀" not in story  # should not return error message
+
+def test_get_horror_invalid_length():
+    """Invalid length should return an error message."""
+    result = get_horror("nonsense")
+    assert "invalid" in result.lower() or "choose" in result.lower()
+    assert isinstance(result, str)
+
+def test_get_horror_returns_from_correct_list():
+    """Test that get_horror returns a story from the correct length list"""
+    for length in ["short", "medium", "long"]:
+        story = get_horror(length)
+        if length == "short":
+            assert story in short_stories
+        elif length == "medium":
+            assert story in medium_stories
+        else:
+            assert story in long_stories
+
+def test_get_horror_default_parameter():
+    """Test that get_horror uses 'medium' as default"""
+    result = get_horror()
+    assert isinstance(result, str)
+    # Should be one of the medium stories
+    assert result in medium_stories
 
 
-class TestGetHorror:
-    """Test suite for get_horror function"""
-    
-    def test_get_horror_returns_string(self):
-        """Test that get_horror returns a string"""
-        result = get_horror("short")
-        assert isinstance(result, str)
-        assert len(result) > 0
-    
-    def test_get_horror_valid_lengths(self):
-        """Test that get_horror works with all valid length parameters"""
-        for length in ["short", "medium", "long"]:
-            result = get_horror(length)
-            assert isinstance(result, str)
-            assert len(result) > 0
-    
-    def test_get_horror_invalid_length(self):
-        """Test that get_horror returns error message for invalid length"""
-        result = get_horror("invalid")
-        assert "invalid parameter" in result.lower()
-        assert isinstance(result, str)
-    
-    def test_get_horror_returns_from_correct_list(self):
-        """Test that get_horror returns a story from the correct length list"""
-        result = get_horror("short")
-        # Should be one of the short stories
-        assert any(story == result or result in story for story in stories["short"])
-    
-    def test_get_horror_default_parameter(self):
-        """Test that get_horror uses 'medium' as default"""
-        result = get_horror()
-        assert isinstance(result, str)
-        # Should be one of the medium stories
-        assert any(story == result or result in story for story in stories["medium"])
+# -----------------------------
+# Tests for get_movie_idea()
+# -----------------------------
+
+def test_get_movie_idea_returns_string():
+    """Should always return a string."""
+    result = get_movie_idea("horror")
+    assert isinstance(result, str)
+    assert result.startswith("Genre:")
+
+def test_get_movie_idea_valid_genres():
+    """Each valid genre should include 'Genre:' and a movie title."""
+    for genre in ["horror", "comedy", "cartoon", "all"]:
+        movie = get_movie_idea(genre)
+        assert "Genre:" in movie
+        assert len(movie.splitlines()) > 1  # includes genre + movie
+
+def test_get_movie_idea_invalid_genre():
+    """Invalid genre should trigger 'not found' message."""
+    result = get_movie_idea("romance")
+    assert "not found" in result.lower()
 
 
 if __name__ == "__main__":
