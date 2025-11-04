@@ -143,3 +143,4 @@ def ghost_idea(genre: str = "all"):
     ghost_say(movie)
 
 
+ghost_say()
