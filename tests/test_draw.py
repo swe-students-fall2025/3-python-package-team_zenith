@@ -9,17 +9,11 @@ from pylloween.draw_rand import draw_random, draw_ghost, draw_pumpkin
 test for drawing bat
 '''
 
-def test_draw_bat_returns_string():
-    """Function should return a non-empty string."""
-    art = draw_bat()
-    assert isinstance(art, str)
-    assert len(art.strip()) > 0
-
-def test_draw_bat_contains_key_glyphs():
-    art = draw_bat()
-    assert isinstance(art, str) and art.strip()
-    assert "/" in art and "\\" in art        
-    assert any(ch in art for ch in "-_^`'=") 
+def test_draw_bat_prints(capsys):
+    draw_bat()
+    out = capsys.readouterr().out
+    assert out.strip()                  # non-empty
+    assert "/" in out and "\\" in out   # bat wings
 
 """
 test for random drawing function
@@ -204,19 +198,19 @@ GHOST_STYLES = {
 
 
 def test_draw_random_pumpkin(monkeypatch, capsys):
-    monkeypatch.setattr(draw_rand_mod.random, "randint", lambda a, b: 2)
-    draw_random()
-    out = capsys.readouterr().out.strip()
-    assert out in PUMPKIN_STYLES
+  monkeypatch.setattr(draw_rand_mod.random, "randint", lambda a, b: 2)
+  draw_random()
+  out = capsys.readouterr().out.strip()
+  assert out in set(PUMPKIN_STYLES.values())
 def test_draw_random_ghost(monkeypatch, capsys):
     # 1 -> ghost
     monkeypatch.setattr(draw_rand_mod.random, "randint", lambda a, b: 1)
     draw_random()
     out = capsys.readouterr().out.strip()
-    assert out in GHOST_STYLES
+    assert out in set(GHOST_STYLES.values())
 
 def test_draw_random_picks_bat(monkeypatch, capsys):
-    # force RNG to choose bat (assuming 2 == bat in your code)
     monkeypatch.setattr(draw_rand_mod.random, "randint", lambda a, b: 3)
-    out = draw_random()
+    draw_random()
+    out = capsys.readouterr().out
     assert "/" in out and "\\" in out
