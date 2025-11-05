@@ -1,6 +1,6 @@
-from ghosts import draw_ghost
-from pumpkin import draw_pumpkin
-from bat import draw_bat
+from . import draw_ghost
+from . import draw_pumpkin
+from . import draw_bat
 import random
 
 """

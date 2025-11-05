@@ -1,6 +1,5 @@
 import pytest
 
-from pylloween.pumpkin import draw_pumpkin
 from pylloween.bat import draw_bat
 from pylloween.draw_rand import draw_random
 
