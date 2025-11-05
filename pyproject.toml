@@ -5,12 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pylloween"
 description = "A silly Halloween-themed Python package 🎃. Get some Horror Stories & Movie ideas."
-version = "0.1.9"
+version = "0.1.10"
 authors = [
   { name="Harrison Gao", email="hg2655@nyu.edu" },
   { name="Evelynn", email = "example@nyu.edu"},
   { name="Leo", email="shangchengli2022@163.com" },
-  { name="Christine" , email = "example@nyu.edu"},
+  { name="Christine" , email = "qj2056@nyu.edu"},
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
