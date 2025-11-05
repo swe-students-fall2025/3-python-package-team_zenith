@@ -15,6 +15,7 @@ from .horrors import get_horror, get_movie_idea
 from .ghosts import draw_ghost, ghost_say, ghost_story, ghost_idea
 from .pumpkin import draw_pumpkin
 from .treats import trick_or_treat, normalize_bag
+from .bat import draw_bat
 
 __all__ = [
     "get_horror",
@@ -26,4 +27,5 @@ __all__ = [
     "draw_pumpkin",
     "trick_or_treat",
     "normalize_bag",
+    "draw_bat"
 ]
