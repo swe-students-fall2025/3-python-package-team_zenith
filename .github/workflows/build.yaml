@@ -17,14 +17,13 @@ jobs:
         uses: kojoru/prepare-pipenv@v1
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Turn on 'editable' mode
-        run: |
-          pipenv install -e .
+      - name: Install deps from lockfile
+        run: pipenv sync --dev --deploy
+      - name: Install package (editable)
+        run: pipenv run pip install -e .
       - name: Test with pytest
         run: |
-          pipenv install pytest
-          pipenv --venv
-          pipenv run python -m pytest
+          run: pipenv run pytest -q
 
 # Remove deliver from feature branch as unique version code must be guaranteed
 #   deliver:
