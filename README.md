@@ -5,7 +5,7 @@
 </p>
 
 Pylloween is a simple Python package that brings Halloween fun to your terminal.  
-It generates ASCII ghosts, short horror stories, and movie ideas while demonstrating modular design, testing, and CI/CD workflows.
+It generates ASCII ghosts, short horror stories, and movie ideas while demonstrating modular design, testing, and CI/CD workflows. The link to the package's page on the PyPI website: https://test.pypi.org/project/pylloween/
 
 ## Teammates:
 
