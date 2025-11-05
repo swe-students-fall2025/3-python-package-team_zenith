@@ -5,7 +5,7 @@
 </p>
 
 Pylloween is a simple Python package that brings Halloween fun to your terminal.  
-It generates ASCII ghosts, short horror stories, and movie ideas while demonstrating modular design, testing, and CI/CD workflows.
+It generates ASCII ghosts, short horror stories, and movie ideas while demonstrating modular design, testing, and CI/CD workflows. The link to the package's page on the PyPI website: https://test.pypi.org/project/pylloween/
 
 ## Teammates:
 
@@ -47,15 +47,43 @@ Pylloween is designed as a lightweight package for practicing:
 
 ```
 
-| Function                | Description                                                     | Example                        |
-| ----------------------- | --------------------------------------------------------------- | ------------------------------ |
-| `draw_ghost()`          | Prints a random ASCII ghost                                     | `plw.draw_ghost()`             |
-| `ghost_say(message)`    | Prints a ghost with a message bubble                            | `plw.ghost_say("HTK-G!")`      |
-| `ghost_story(length)`   | Displays a ghost telling a story (`short`, `medium`, `long`)    | `plw.ghost_story("short")`     |
-| `ghost_idea(genre)`     | Ghost recommends a movie (`horror`, `comedy`, `cartoon`, `all`) | `plw.ghost_idea("horror")`     |
-| `get_horror(length)`    | Returns a story string based on length                          | `plw.get_horror("medium")`     |
-| `get_movie_idea(genre)` | Returns a random movie title                                    | `plw.get_movie_idea("comedy")` |
+```
+                                    ;::;;::;,
+                                    ;::;;::;;,
+                                   ;;:::;;::;;,
+                   .vnmmnv%vnmnv%,.;;;:::;;::;;,  .,vnmnv%vnmnv,
+                vnmmmnv%vnmmmnv%vnmmnv%;;;;;;;%nmmmnv%vnmmnv%vnmmnv
+              vnmmnv%vnmmmmmnv%vnmmmmmnv%;:;%nmmmmmmnv%vnmmmnv%vnmmmnv
+             vnmmnv%vnmmmmmnv%vnmmmmmmmmnv%vnmmmmmmmmnv%vnmmmnv%vnmmmnv
+            vnmmnv%vnmmmmmnv%vnmmmmmmmmnv%vnmmmmmmmmmmnv%vnmmmnv%vnmmmnv
+           vnmmnv%vnmmmmmnv%vnmm;mmmmmmnv%vnmmmmmmmm;mmnv%vnmmmnv%vnmmmnv,
+          vnmmnv%vnmmmmmnv%vnmm;' mmmmmnv%vnmmmmmmm;' mmnv%vnmmmnv%vnmmmnv
+          vnmmnv%vnmmmmmnv%vn;;    mmmmnv%vnmmmmmm;;    nv%vnmmmmnv%vnmmmnv
+         vnmmnv%vnmmmmmmnv%v;;      mmmnv%vnmmmmm;;      v%vnmmmmmnv%vnmmmnv
+         vnmmnv%vnmmmmmmnv%vnmmmmmmmmm;;       mmmmmmmmmnv%vnmmmmmmnv%vnmmmnv
+         vnmmnv%vnmmmmmmnv%vnmmmmmmmmmm;;     mmmmmmmmmmnv%vnmmmmmmnv%vnmmmnv
+         vnmmnv%vnmmmmm nv%vnmmmmmmmmmmnv;, mmmmmmmmmmmmnv%vn;mmmmmnv%vnmmmnv
+         vnmmnv%vnmmmmm  nv%vnmmmmmmmmmnv%;nmmmmmmmmmmmnv%vn; mmmmmnv%vnmmmnv
+         `vnmmnv%vnmmmm,  v%vnmmmmmmmmmmnv%vnmmmmmmmmmmnv%v;  mmmmnv%vnnmmnv'
+          vnmmnv%vnmmmm;,   %vnmmmmmmmmmnv%vnmmmmmmmmmnv%;'   mmmnv%vnmmmmnv
+           vnmmnv%vnmmmm;;,   nmmm;'              mmmm;;'    mmmnv%vnmmmmnv'
+           `vnmmnv%vnmmmmm;;,.         mmnv%v;,            mmmmnv%vnmmmmnv'
+            `vnmmnv%vnmmmmmmnv%vnmmmmmmmmnv%vnmmmmmmnv%vnmmmmmnv%vnmmmmnv'
+              `vnmvn%vnmmmmmmnv%vnmmmmmmmnv%vnmmmmmnv%vnmmmmmnv%vnmmmnv'
+                  `vn%vnmmmmmmn%:%vnmnmmmmnv%vnmmmnv%:%vnmmnv%vnmnv'
 
+```
+
+| Function                         | Description                                                     | Example                           |
+| -------------------------------- | --------------------------------------------------------------- | --------------------------------- |
+| `draw_ghost()`                   | Prints a random ASCII ghost                                     | `plw.draw_ghost()`                |
+| `draw_pumpkin()`                 | Prints a random ASCII pumpkin                                   | `plw.draw_pumpkin()`              |
+| `ghost_say(message)`             | Prints a ghost with a message bubble                            | `plw.ghost_say("HTK-G!")`         |
+| `ghost_story(length)`            | Displays a ghost telling a story (`short`, `medium`, `long`)    | `plw.ghost_story("short")`        |
+| `ghost_idea(genre)`              | Ghost recommends a movie (`horror`, `comedy`, `cartoon`, `all`) | `plw.ghost_idea("horror")`        |
+| `get_horror(length)`             | Returns a story string based on length                          | `plw.get_horror("medium")`        |
+| `get_movie_idea(genre)`          | Returns a random movie title                                    | `plw.get_movie_idea("comedy")`    |
+| `trick_or_treat(n, bag, seed)`   | Returns sampled candies and counts`(picks, counts)`             | `plw.trick_or_treat(10, seed=42)` |
 ---
 
 ## Installation
@@ -85,6 +113,12 @@ import pylloween as plw
 plw.ghost_say("Hello world!")
 plw.ghost_story("medium")
 print(plw.get_movie_idea("cartoon"))
+
+plw.draw_pumpkin()
+
+picks, counts = plw.trick_or_treat(n=12, seed=2025)
+print(picks)
+print(counts)
 ```
 
 ### Run via Command Line
@@ -125,10 +159,14 @@ pylloween/
 │       ├── __init__.py
 │       ├── __main__.py
 │       ├── ghosts.py
-│       └── horrors.py
+│       ├── horrors.py
+|       ├── pumpkin.py
+|       └── treats.py
 ├── tests/
 │   ├── test_ghosts.py
-│   └── test_horrors.py
+│   ├── test_horrors.py
+|   ├── test_pumpkin.py
+|   └── test_treats.py
 ├── pyproject.toml
 └── .github/
     └── workflows/
