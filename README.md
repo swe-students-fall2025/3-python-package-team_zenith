@@ -167,6 +167,7 @@ pylloween/
 |       ├── pumpkin.py
 |       └── treats.py
 ├── tests/
+│   ├── test_draw.py
 │   ├── test_ghosts.py
 │   ├── test_horrors.py
 |   ├── test_pumpkin.py
