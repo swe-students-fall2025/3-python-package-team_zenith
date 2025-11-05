@@ -28,4 +28,6 @@ __all__ = [
     "draw_pumpkin",
     "trick_or_treat",
     "normalize_bag",
+    "draw_bat",
+    "draw_random"
 ]
