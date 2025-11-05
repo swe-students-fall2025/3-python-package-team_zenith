@@ -201,13 +201,15 @@ def test_draw_random_pumpkin(monkeypatch, capsys):
   monkeypatch.setattr(draw_rand_mod.random, "randint", lambda a, b: 2)
   draw_random()
   out = capsys.readouterr().out.strip()
-  assert out in set(PUMPKIN_STYLES.values())
+  PUMPKIN_SET = {s.strip() for s in PUMPKIN_STYLES.values()}
+  assert out.strip() in PUMPKIN_SET
 def test_draw_random_ghost(monkeypatch, capsys):
     # 1 -> ghost
     monkeypatch.setattr(draw_rand_mod.random, "randint", lambda a, b: 1)
     draw_random()
     out = capsys.readouterr().out.strip()
-    assert out in set(GHOST_STYLES.values())
+    GHOST_SET = {s.strip() for s in GHOST_STYLES.values()}
+    assert out.strip() in GHOST_SET
 
 def test_draw_random_picks_bat(monkeypatch, capsys):
     monkeypatch.setattr(draw_rand_mod.random, "randint", lambda a, b: 3)
