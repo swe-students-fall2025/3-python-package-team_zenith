@@ -13,7 +13,7 @@ authors = [
   { name="Christine", email="" },
   { name="Evelynn" },
   { name="Leo", email="shangchengli2022@163.com" },
-  { name="Christine" , email = "example@nyu.edu"},
+  { name="Christine" , email = "qj2056@nyu.edu"},
 ]
 license = { file = "LICENSE" }
 readme = "README.md"

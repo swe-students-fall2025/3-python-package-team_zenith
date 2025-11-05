@@ -13,6 +13,8 @@ This package provides:
 
 from .horrors import get_horror, get_movie_idea
 from .ghosts import draw_ghost, ghost_say, ghost_story, ghost_idea
+from .pumpkin import draw_pumpkin
+from .treats import trick_or_treat, normalize_bag
 
 __all__ = [
     "get_horror",
@@ -21,4 +23,7 @@ __all__ = [
     "ghost_say",
     "ghost_story",
     "ghost_idea",
+    "draw_pumpkin",
+    "trick_or_treat",
+    "normalize_bag",
 ]
