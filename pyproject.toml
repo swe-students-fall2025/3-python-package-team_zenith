@@ -4,8 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pylloween"
+<<<<<<< Updated upstream
 description = "A silly Halloween-themed Python package 🎃"
 version = "0.1.0"
+=======
+description = "A silly Halloween-themed Python package 🎃. Get some Horror Stories & Movie ideas."
+version = "0.1.13"
+>>>>>>> Stashed changes
 authors = [
   { name="Harrison Gao", email="hg2655@nyu.edu" },
   { name="Evelynn", email="" },
