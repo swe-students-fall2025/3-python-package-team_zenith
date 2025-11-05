@@ -205,12 +205,14 @@ GHOST_STYLES = {
 
 def test_draw_random_pumpkin(monkeypatch, capsys):
     monkeypatch.setattr(draw_rand_mod.random, "randint", lambda a, b: 2)
-    out = draw_random()
+    draw_random()
+    out = capsys.readouterr().out.strip()
     assert out in PUMPKIN_STYLES
 def test_draw_random_ghost(monkeypatch, capsys):
-    # Force RNG to choose the ghost path (3 in our mapping)
+    # 1 -> ghost
     monkeypatch.setattr(draw_rand_mod.random, "randint", lambda a, b: 1)
-    out = draw_random()
+    draw_random()
+    out = capsys.readouterr().out.strip()
     assert out in GHOST_STYLES
 
 def test_draw_random_picks_bat(monkeypatch, capsys):
