@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-"""
-function draws and returns a pumpkin
-"""
-
-
-def draw_pumpkin():
-    """Draws and returns a pumpkin."""
-    return """___
-           ___)__|_
-      .-*'          '*-,
-     /      /|   |\     \
-    ;      /_|   |_\     ;
-    ;   |\           /|  ;
-    ;   | ''--...--'' |  ;
-     \  ''---.....--''  /
-      ''*-.,_______,.-*'
-"""
-=======
 import random
 from typing import Optional, Union
 
@@ -187,4 +168,3 @@ def draw_pumpkin(style: Optional[Union[int, str]] = None):
             raise ValueError(f"style must be one of {sorted(PUMPKIN_STYLES.keys())}")
 
     print(PUMPKIN_STYLES[chosen])
->>>>>>> e924f7e87c2a0264ae07988c725167db4260e33c
