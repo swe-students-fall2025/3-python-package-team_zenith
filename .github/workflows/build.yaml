@@ -11,6 +11,7 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.9", "3.11"]
+      run: pipenv run pytest -q
     steps:
       - uses: actions/checkout@v4
       - name: Install Python, pipenv and Pipfile packages
