@@ -78,8 +78,6 @@ Pylloween is designed as a lightweight package for practicing:
 | -------------------------------- | --------------------------------------------------------------- | --------------------------------- |
 | `draw_ghost()`                   | Prints a random ASCII ghost                                     | `plw.draw_ghost()`                |
 | `draw_pumpkin()`                 | Prints a random ASCII pumpkin                                   | `plw.draw_pumpkin()`              |
-| `draw_bat()`                     | Prints a random ASCII bat                                       | `plw.draw_bat()`                  |
-| `draw_random()`                  | Prints a random Halloween symbol                                | `plw.draw_random()`               |
 | `ghost_say(message)`             | Prints a ghost with a message bubble                            | `plw.ghost_say("HTK-G!")`         |
 | `ghost_story(length)`            | Displays a ghost telling a story (`short`, `medium`, `long`)    | `plw.ghost_story("short")`        |
 | `ghost_idea(genre)`              | Ghost recommends a movie (`horror`, `comedy`, `cartoon`, `all`) | `plw.ghost_idea("horror")`        |
