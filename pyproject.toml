@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pylloween"
+description = "A silly Halloween-themed Python package 🎃. Get some Horror Stories & Movie ideas."
+version = "0.1.11"
+authors = [
+  { name="Harrison Gao", email="hg2655@nyu.edu" },
+  { name="Evelynn", email="em4829@nyu.edu" },
+  { name="Leo", email="shangchengli2022@163.com" },
+  { name="Christine" , email = "qj2056@nyu.edu"},
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["python", "package", "build", "tutorial", "fun", "spooky", "horror", "halloween"]
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+"Homepage" = "https://github.com/swe-students-fall2025/3-python-package-team_zenith"
+"Repository" = "https://github.com/swe-students-fall2025/3-python-package-team_zenith.git"
+"Bug Tracker" = "https://github.com/swe-students-fall2025/3-python-package-team_zenith/issues"
+
+[project.scripts]
+pylloween = "pylloween.__main__:main"
