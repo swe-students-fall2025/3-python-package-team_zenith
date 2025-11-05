@@ -9,9 +9,6 @@ version = "0.1.11"
 authors = [
   { name="Harrison Gao", email="hg2655@nyu.edu" },
   { name="Evelynn", email="em4829@nyu.edu" },
-  { name="Leo", email="" },
-  { name="Christine", email="" },
-  { name="Evelynn" },
   { name="Leo", email="shangchengli2022@163.com" },
   { name="Christine" , email = "qj2056@nyu.edu"},
 ]
