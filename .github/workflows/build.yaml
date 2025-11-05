@@ -22,8 +22,7 @@ jobs:
       - name: Install package (editable)
         run: pipenv run pip install -e .
       - name: Test with pytest
-        run: |
-          run: pipenv run pytest -q
+        run: pipenv run pytest -q
 
 # Remove deliver from feature branch as unique version code must be guaranteed
 #   deliver:
