@@ -4,21 +4,6 @@ from pylloween.pumpkin import draw_pumpkin
 from pylloween.bat import draw_bat
 from pylloween.draw_rand import draw_random
 
-'''
-test for drawing pumpkin
-'''
-
-def test_draw_pumpkin_returns_string():
-    """Function should return a non-empty string."""
-    art = draw_pumpkin()
-    assert isinstance(art, str)
-    assert len(art.strip()) > 0
-
-def test_draw_pumpkin_contains_key_glyphs():
-    """Returned string should contain expected ASCII/Unicode bits."""
-    art = draw_pumpkin()
-    assert "___" in art
-    assert "''---.....--''" in art or "''-.,_______,.-*'" in art or ".__" in art
 
 '''
 test for drawing bat

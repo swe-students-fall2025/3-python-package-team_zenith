@@ -3,6 +3,10 @@ from pumpkin import draw_pumpkin
 from bat import draw_bat
 import random
 
+"""
+function randomly chooses which halloween symbol to draw
+"""
+
 def draw_random():
     choice = random.randint(1,3)
 
