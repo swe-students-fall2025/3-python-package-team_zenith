@@ -1,6 +1,6 @@
-from .ghosts import draw_ghost
-from .pumpkin import draw_pumpkin
-from .bat import draw_bat
+from pylloween.ghosts import draw_ghost
+from pylloween.pumpkin import draw_pumpkin
+from pylloween.bat import draw_bat
 import random
 
 """
