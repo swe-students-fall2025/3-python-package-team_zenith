@@ -1,11 +1,14 @@
 """
 function draws and returns a bat
-"""        
+"""
 
-def draw_bat():
-    
-    print( r"""  _   ,_,   _
+BAT_ART = r"""  _   ,_,   _
                 / `'=) (='` |
                /.-.-.\ /.-.-.\ 
                `      "      `
-               """)
+               """
+
+def draw_bat():
+    """Print and return a cute ASCII bat."""
+    print(BAT_ART)
+    return BAT_ART
