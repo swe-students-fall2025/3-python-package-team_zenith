@@ -1,10 +1,8 @@
 """
 function draws and returns a bat
-"""        
+"""
 
-def draw_bat():
-    
-    print( r"""  _   ,_,   _
+BAT_ART = r"""  _   ,_,   _
                 / `'=) (='` |
                /.-.-.\ /.-.-.\ 
                `      "      `
