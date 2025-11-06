@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f173fd4ec2e082efccac796620352d661bbdb97492fd435cc72ab8bfbe5e07a2"
+            "sha256": "af9560d4d010142892e2b8b486c5dd5a727ac1e180fb8fce72016bbfd6c0cf50"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -13,15 +13,18 @@
                 "name": "pypi",
                 "url": "https://pypi.org/simple",
                 "verify_ssl": true
-            },
-            {
-                "name": "testpypi",
-                "url": "https://test.pypi.org/simple/",
-                "verify_ssl": true
             }
         ]
     },
     "default": {
+        "backports.tarfile": {
+            "hashes": [
+                "sha256:77e284d754527b01fb1e6fa8a1afe577858ebe4e9dad8919e34c862cb399bc34",
+                "sha256:d75e02c268746e1b8144c278978b6e98e85de6ad16f8e4b0844a154557eca991"
+            ],
+            "markers": "python_version >= '3.8'",
+            "version": "==1.2.0"
+        },
         "build": {
             "hashes": [
                 "sha256:698edd0ea270bde950f53aed21f3a0135672206f3911e0176261a31e0e07b397",
@@ -182,6 +185,14 @@
             "markers": "python_version >= '3.8'",
             "version": "==3.11"
         },
+        "importlib-metadata": {
+            "hashes": [
+                "sha256:d13b81ad223b890aa16c5471f2ac3056cf76c5f10f82d6f9292f0b415f389000",
+                "sha256:e5dd1551894c77868a30651cef00984d50e1002d06942a7101d34870c5f02afd"
+            ],
+            "markers": "python_version >= '3.9'",
+            "version": "==8.7.0"
+        },
         "iniconfig": {
             "hashes": [
                 "sha256:c76315c77db068650d49c5b56314774a7804df16fee4402c1f19d6d15d8c4730",
@@ -302,15 +313,6 @@
             "markers": "python_version >= '3.8'",
             "version": "==2.19.2"
         },
-        "pylloween": {
-            "hashes": [
-                "sha256:2ba489ebc306587377c70613d1dfbd1e4f37dad412db9681586d80b174a3163f",
-                "sha256:a33ccf53459593be4b9860f344ef067e58607762d1c22f0e90fdab8a291556ca"
-            ],
-            "index": "testpypi",
-            "markers": "python_version >= '3.7'",
-            "version": "==0.1.18"
-        },
         "pyproject-hooks": {
             "hashes": [
                 "sha256:1e859bd5c40fae9448642dd871adf459e5e2084186e8d2c2a79a824c970da1f8",
@@ -384,6 +386,14 @@
             ],
             "markers": "python_version >= '3.9'",
             "version": "==2.5.0"
+        },
+        "zipp": {
+            "hashes": [
+                "sha256:071652d6115ed432f5ce1d34c336c0adfd6a884660d1e9712a256d3d3bd4b14e",
+                "sha256:a07157588a12518c9d4034df3fbbee09c814741a33ff63c05fa29d26a2404166"
+            ],
+            "markers": "python_version >= '3.9'",
+            "version": "==3.23.0"
         }
     },
     "develop": {}
